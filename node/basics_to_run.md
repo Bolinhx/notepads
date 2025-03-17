@@ -23,6 +23,9 @@ Um projeto node tem como base um "arquivo empacotador" Package.json , esse arqui
     3- E criado nosso arquivo Package.json com as informacoes
     4- Criar pasta SRC com todos os arquivos JS dentro dele, de fora somente arquivos de configuracao e outros diretorios
 
-Para rodar temos os comandos 
-    - node caminho_do_arquivo
-    - node --watch caminh_do_arquivo (watch elimina o uso do "nodemon" e a necessidade de fechar e rodar o programa em cada mudanca que for feita)
+Para rodar temos os comandos:
+
+    1- npm init -y (criar projeto node/package.json)
+    2- node caminho_do_arquivo
+    3- node --watch caminh_do_arquivo (watch elimina o uso do "nodemon" e a necessidade de fechar e rodar o programa em cada mudanca que for feita) 
+    
