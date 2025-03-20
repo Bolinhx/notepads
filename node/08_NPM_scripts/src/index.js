@@ -1,0 +1,1 @@
+console.log('olha o script rodando');
