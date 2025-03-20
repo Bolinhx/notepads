@@ -1,0 +1,5 @@
+***Por que NODE?***
+**************
+<p>Em um trabalho academico(2025/1 semestre), optei por usar Node por ser de facil entendimento da equipe(a maioria ja havia tido contato com JS mas pouco com backend). Considerei tambem o fato de que o que importa e saber a estrutura a sintaxe tende a se resolver mais facil. Topei o desafio de me adaptar com o tempo curto e mergulhar mais nesse universo do Node, aqui voce vai encontrar desde o inicio com JS simples ate o funcionamento com APIs e Typescript. Muitas vezes vou fazer comparacoes com Java ou outra linguagem, muitos conceitos simples de estruturacao tambem sao revisitados e mencionados.</p>
+
+- Se voce teve curiosidade de vir ate aqui e ler, me conta o que achou dessa abordagem, me de dicas de algo que possa ter deixado passar ou ate mesmo caso tenha gerado alguma duvida, vou adorar conversar sobre
