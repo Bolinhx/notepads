@@ -85,4 +85,66 @@ interface robot {
 // e garantir as entradas 
 
 //CLASSES "a forma"
+// Ao iniciarmos as propriedades da classe ela vai dar erro se nao passarmos os valores
+// OUUUU iniciarmos o construtor da classe
+
+    //DATA MODIFIERS podem ser aplicados a METODOS e ATRIBUTOS
+    // private so pode ser enxeregado dentro da classe
+    // public valor default, enxergado por tudo e todos
+    // protected so pode ser enxergado pela classe e pelas classses que herdam ela
+class Character {
+    protected name?: string; //se colocarmos o ? deixa esse atribnuto como opcional
+    str : number;
+    skill: number;
+
+    constructor(name:string,str: number, skill:number){
+        this.name = name;
+        this.str = str;
+        this.skill = skill;
+    };
+
+    atack() :void { //se quisermos dar um return precisamos definir o tipo do retorno
+        console.log(`Attack with${this.str} points`);
+    }
+}
+
+// a classe pai sempre e uma "superclass"
+//entao dentro do construtor precisamos chamar super()
+//SUBCLASSES ou heranca
+class Mago extends Character{
+    magicPoints : number;
+    constructor(name: string, str: number, skill:number, magicPoints:number){
+        super(name,str,skill) //o super deve ser passado antes (SEMPRE) dos atributos da classe filha
+        this.magicPoints = magicPoints;
+    }
+}
+
+//GENERICS
+// assim como remedio generico, nao sabemos exato o nome, mas sabemos que e do tipo remedio tal
+// com generics a gente deixa aberto essa recepcao mas tipamos ela para evitar erros
+function concatArray<T>(...itens: T[]):T[]{
+    return new Array().concat(...itens); // os "..." = spread que significa que aceita/retorna varios
+}
+    // inves de colocarmos ANY colocamos o T , entao ao chamarmos o metodo definimos o tipo 
+const numArray = concatArray<number[]>([1,3,6], [24]);
+const strArray = concatArray<string[]>(["bolinhx", "barbara"], ["24"]);
+
+let dado:string = "ralph";
+console.log(dado);
+
+//DECORATORS
+// para funcionar e preciso ativar "experimentalDecorators" no tsconfig
+
+// funcionam quase que literalmente como o nome diz, "voce" decora algo
+// acho que trigger e uma forma melhor de definir, "voce" decora o metodo
+// e chama ele sempre que ativado o trigger
+
+function exibirNome(target: any){
+    console.log(target);
+}
+
+@exibirNome  //usa o @ parece ate anotacao la no java
+class Funcionario{ }
+
+//pode ser usado para sobescrever/OVERRIDE metodos ou em classes
 
